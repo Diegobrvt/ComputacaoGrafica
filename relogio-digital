@@ -1,0 +1,59 @@
+void setup(){
+ 
+  size(500,500);
+}
+
+void draw (){
+  background(13,70,202);
+  translate(width/2,height/2);
+  int r = 220;
+  int r2 = 210;
+  int r3 = 200;
+ 
+  int horas = 12;
+  int minutos = 60;
+  int m = 40;
+  float angulo = TWO_PI/horas;
+  float angulo2 = TWO_PI/minutos;
+  fill(255);
+  ellipse(0, 0, r*2,r*2);
+  ellipse(0, 0, 0,0);
+  
+  
+
+ 
+ 
+            for(int i = 0; i<horas; i++){
+              int hora = hour();
+              float xgrande= r3*cos(angulo*(i+1)-HALF_PI);
+              float ygrande = r3 *sin(angulo*(i+1)-HALF_PI);
+              float xgrandefinal= r *cos(angulo*(i+1)-HALF_PI) ;
+              float ygrandefinal = r *sin(angulo*(i+1)-HALF_PI) ;
+              line(xgrande,ygrande,xgrandefinal,ygrandefinal);
+              fill(255,0,0);
+              textAlign(CENTER);
+              text(i+1,0.89*xgrande, 0.89*ygrande);
+              
+              if(i == hora || i == (hora-12)){
+                float a= (r3-70)*cos(angulo*i-HALF_PI);
+                float b = (r3-70) *sin(angulo*i-HALF_PI);
+                line(a,b,0,0);
+              
+              }
+              
+              }
+              for(int i = 0; i<minutos; i++){
+              int minuto = minute();
+              float x2 = r *cos(angulo2*i-HALF_PI) ;
+              float y2= r *sin(angulo2*i-HALF_PI) ;
+              float x3 = r2 *cos(angulo2*i-HALF_PI) ;
+              float y3= r2 *sin(angulo2*i-HALF_PI) ;
+              line(x2,y2,x3,y3);  
+              
+              if(i == minuto){
+               float a= (r3-20)*cos(angulo2*i-HALF_PI);
+               float b = (r3-20) *sin(angulo2*i-HALF_PI);
+               line(a,b,0,0);
+            }
+          }
+}
