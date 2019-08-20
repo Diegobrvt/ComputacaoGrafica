@@ -1,40 +1,47 @@
-// Ângulo de rotação em torno do sol e planetas
+// Angle of rotation around sun and planets
 float th = 0;
-PImage bg;
+PImage fundo;
+int y;
 
 void setup() {
   size(600 , 499);
-  bg = loadImage("fundo.jpg");
+  fundo = loadImage("fundo.jpg");
 }
 
 void draw() {
   //background(255);
-  background(bg);
+  background(fundo);
+  
+
+  
+  
+  
+  
   stroke(0);
 
-  // Transfere para o centro para desenhar o sol.
+  // Translate to center of window to draw the sun.
   translate(width/2, height/2);
   fill(255, 200, 50);
   ellipse(0, 0, 120, 120);
 
-  // A terra gira em torno do sol
+  // The earth rotates around the sun
   pushMatrix();
-  rotate(theta);
-  translate(150, 0);
+  rotate(th);
+  translate(120, 0);
   fill(50, 200, 255);
-  ellipse(0, 0, 60, 60);
+  ellipse(0, 0, 32, 32);
 
-  /// A Lua gira em torno da terra
-  // pushMatrix () é chamado para salvar o estado de transformação antes de desenhar a lua
-  // A lua gira em torno da terra (que gira em torno do sol).
-  
+  // Moon #1 rotates around the earth
+  // pushMatrix() is called to save the transformation state before drawing moon #1. 
+  // This way we can pop and return to earth before drawing moon #2. 
+  // Both moons rotate around the earth (which itself is rotating around the sun).
   pushMatrix(); 
   rotate(-th*4);
-  translate(60, 0);
+  translate(36, 0);
   fill(50, 255, 200);
-  ellipse(0, 0, 30, 30);
+  ellipse(0, 0, 12, 12);
   popMatrix();
   popMatrix();
 
-  theta += 0.01;
+  th += 0.01;
 }
