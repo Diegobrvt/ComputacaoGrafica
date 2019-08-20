@@ -1,5 +1,5 @@
 // Ângulo de rotação em torno do sol e planetas
-float theta = 0;
+float th = 0;
 PImage bg;
 
 void setup() {
@@ -26,10 +26,10 @@ void draw() {
 
   /// A Lua gira em torno da terra
   // pushMatrix () é chamado para salvar o estado de transformação antes de desenhar a lua
-  // A luas gira em torno da terra (que gira em torno do sol).
+  // A lua gira em torno da terra (que gira em torno do sol).
   
   pushMatrix(); 
-  rotate(-theta*4);
+  rotate(-th*4);
   translate(60, 0);
   fill(50, 255, 200);
   ellipse(0, 0, 30, 30);
