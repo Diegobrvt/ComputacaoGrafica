@@ -84,7 +84,7 @@ def timer(i):
 glutInit(argv)
 glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GLUT_MULTISAMPLE)
 glutInitWindowSize(800,600)
-glutCreateWindow("CUBO")
+glutCreateWindow("Piramide")
 glutDisplayFunc(desenha)
 glEnable(GL_MULTISAMPLE)
 glEnable(GL_DEPTH_TEST)
