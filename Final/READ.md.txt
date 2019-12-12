@@ -2,6 +2,17 @@
 Trabalho Final de Computação Gráfica
 Alunos: Diego Liebermann e Thiago Ferreira
 
+Como rodar a aplicação:
+1- Baixar a pasta Final
+2- Extrair o arquivo zip na sua área de trabalho.
+3- Abrir o arquivo index.html no seu navegador(Preferencialmente no Google Chrome).
+------------------------------Ou--------------------------
+1- Caso não funcione, acesse : https://codepen.io/pen/
+2- Abra o arquivo index.html no bloco de notas e copie o código, vá até o codepen e na aba HTML cole o código.
+3- Abra o arquivo stylesheet.css no bloco de notas e copie o código, vá até o codepen e na aba CSS cole o código.
+4- Abra o arquivo main.js no bloco de notas e copie o código, vá até o codepen e na aba JS cole o código.
+
+
 Arquivos:
 
 index.html
